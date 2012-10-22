@@ -1,6 +1,7 @@
 GRAILS_HOME=/Users/adrianbruinhout/devapps/grails-2.0.0
 
 export PATH=/usr/local/bin:$GRAILS_HOME/bin:$PATH
+export PATH="/usr/local/heroku/bin:$PATH"
 
 parse_git_branch () {
     git name-rev HEAD 2> /dev/null | sed 's#HEAD\ \(.*\)# (git::\1)#'
@@ -16,14 +17,13 @@ parse_svn_repository_root() {
 }
 
 BLACK="\[\033[0;38m\]"
-RED="\[\033[0;31m\]"
+RED="\[\033[00;31m\]"
 RED_BOLD="\[\033[01;31m\]"
 YELLOW="\[\033[00;33m\]"
-BLUE="\[\033[00;36m\]"
 GREEN="\[\033[0;32m\]"
 
-export PS1="$BLACK[ \u@$YELLOW\h $GREEN\w$RED_BOLD\$(parse_git_branch)\$(parse_svn_branch)$BLACK ] 
-\e[0;31m★ ★ ★\e[m  "
+export PS1="$BLACK[ \u@$YELLOW\h $GREEN\w$RED\$(parse_git_branch)\$(parse_svn_branch)$BLACK ]
+\[\033[00;31m\]★ ★ ★  \[\033[0m\]"
 
 source $HOME/.git-completion.bash
 
