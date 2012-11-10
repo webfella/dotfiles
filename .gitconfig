@@ -13,6 +13,7 @@
 	trustExitCode = true
 [alias]
 	punch-it-chewy = push origin master
+	deploy-heroku = push heroku master
 	use-the-force-luke = pull --rebase origin master
 	booyah = status
 	show-me-the-money = log --name-only
