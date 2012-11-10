@@ -16,6 +16,14 @@ parse_svn_repository_root() {
     svn info 2>/dev/null | sed -ne 's#^Repository Root: ##p'
 }
 
+export LESS_TERMCAP_mb=$'\E[00;32m'
+export LESS_TERMCAP_md=$'\E[00;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[00;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[00;36m'
+
 BLACK="\[\033[0;38m\]"
 RED="\[\033[00;31m\]"
 RED_BOLD="\[\033[01;31m\]"
