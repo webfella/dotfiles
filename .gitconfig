@@ -20,6 +20,7 @@
 	do-it = commit -m
 	fuckit = stash
 	unfuckit = stash pop
+	undocommit = reset --soft HEAD^
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [credential]
 	helper = osxkeychain
