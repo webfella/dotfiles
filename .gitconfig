@@ -15,11 +15,7 @@
 	punch-it-chewy = push origin master
 	deploy-heroku = push heroku master
 	use-the-force-luke = pull --rebase origin master
-	booyah = status
-	show-me-the-money = log --name-only
-	do-it = commit -m
-	fuckit = stash
-	unfuckit = stash pop
+	cometogether = merge --no-ff
 	undocommit = reset --soft HEAD^
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [credential]
