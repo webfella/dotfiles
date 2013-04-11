@@ -1,9 +1,15 @@
-" Vim configuration
+" Basic Vim configuration.
+
+call pathogen#infect()						" Using Pathogen for managing bundles
 
 set nocompatible                  " Must come first because it changes other options.
 
 syntax enable                     " Turn on syntax highlighting.
+set background=dark								" Dark background
+colorscheme solarized							" Solarized Theme
 filetype plugin indent on         " Turn on file type detection.
+
+autocmd vimenter * NERDTree				" Launch NERDTree on open.
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
