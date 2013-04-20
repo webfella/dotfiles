@@ -1,8 +1,8 @@
 " Basic Vim configuration.
 
-call pathogen#infect()            " Using Pathogen for managing bundles
-
 set nocompatible                  " Must come first because it changes other options.
+
+call pathogen#infect()            " Using Pathogen for managing bundles
 
 syntax enable                     " Turn on syntax highlighting.
 set background=dark               " Dark background
