@@ -4,6 +4,7 @@ ZSH_THEME="blinks"
 
 alias zshconfig="sublime ~/.zshrc"
 alias ohmyzsh="sublime ~/.oh-my-zsh"
+alias cwd="pwd | tr -d '\n' | pbcopy"
 
 plugins=(brew git git-flow npm ruby rails3)
 
