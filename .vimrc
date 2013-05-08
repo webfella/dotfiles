@@ -9,8 +9,6 @@ set background=dark               " Dark background
 colorscheme solarized             " Solarized Theme
 filetype plugin indent on         " Turn on file type detection.
 
-autocmd vimenter * NERDTree       " Launch NERDTree on open.
-
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -55,6 +53,9 @@ imap <left> <nop>
 imap <right> <nop>
 
 set laststatus=2                  " Show the status line all the time
+
+" Launch NERDTree on open if a file isn't specified.
+autocmd vimenter * if !argc() | NERDTree | endif
 
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
