@@ -6,6 +6,7 @@ call pathogen#infect()            " Using Pathogen for managing bundles
 
 syntax enable                     " Turn on syntax highlighting.
 set background=dark               " Dark background
+let g:solarized_termtrans = 1     " Fixes transparency issue in iTerm
 colorscheme solarized             " Solarized Theme
 filetype plugin indent on         " Turn on file type detection.
 
@@ -41,16 +42,6 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
-
-" disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
 
 set laststatus=2                  " Show the status line all the time
 
